@@ -1,0 +1,14 @@
+.head{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rpx;
+}
+.title{
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  line-height: 1.5;
+}
+.username{
+  font-weight: bold;
+  color: black;
+}

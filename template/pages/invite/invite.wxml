@@ -1,0 +1,11 @@
+<!--pages/invite/invite.wxml-->
+<view class="flex justify-center big">
+  <view class="flex justify-center call">{{code.call}}</view>
+  <view class="flex justify-center box">
+    <view class="erwei">
+      <view class="flex justify-center porn">{{code.porn}}</view>
+      <image class="code" src="{{yao}}"></image>
+      <view class="flex justify-center sao">{{code.sao}}</view>
+    </view>
+  </view>
+</view>

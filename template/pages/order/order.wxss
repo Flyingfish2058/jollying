@@ -1,0 +1,54 @@
+/* pages/order/order.wxss */
+.img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.money {
+  color: red;
+}
+
+.stock {
+  color: gainsboro;
+}
+
+.xinxi {
+  font-size: 38rpx;
+  margin-top: 50rpx;
+}
+.van-card__content{
+  margin-top: 15px;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+.site{
+  font-size: 13px;
+  line-height: 1.5;
+}
+.addres {
+  font-size: 37rpx;
+}
+
+.remarks {
+  margin-top: -20rpx;
+}
+
+.paly {
+  padding-top: 50rpx;
+  padding-bottom: 158rpx;
+}
+
+.pay {
+  font-size: 35rpx;
+}
+
+.pay span {
+  font-size: 38rpx;
+  color: red;
+}

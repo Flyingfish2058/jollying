@@ -1,0 +1,34 @@
+.tower-swiper .tower-item {
+		transform: scale(calc(0.5 + var(--index) / 10));
+		margin-left: calc(var(--left) * 100rpx - 150rpx);
+		z-index: var(--index);
+}
+.list{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.left{
+  width: 43vw;
+  height: 50vh;
+  border: 1px solid;
+}
+.amount{
+  flex-wrap:wrap;
+  padding-top:30rpx;
+  line-height: 1;
+}
+.name{
+  font-weight: bold;
+  font-size: 25rpx;
+}
+.money{
+  color: red;
+  font-size: 30rpx;
+}
+.dele{
+  text-decoration: line-through;
+  font-size: 25rpx;
+}
+.btn{
+  border: 1px solid gray;
+}

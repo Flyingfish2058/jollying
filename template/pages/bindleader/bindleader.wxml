@@ -1,0 +1,10 @@
+<!--pages/bindleader/bindleader.wxml-->
+<view class="box">
+  <view class="userinfo">
+      <image src="{{photo}}"></image>
+      <text class="userinfo-nickname">{{name}}</text>
+  </view>
+  <view class="padding flex flex-direction tijiao">
+    <button class="cu-btn bg-grey lg" bindtap="joinus">Join US</button>
+  </view>
+</view>

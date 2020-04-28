@@ -1,0 +1,19 @@
+<!--pages/addres/addres.wxml-->
+<!-- 地址列表 -->
+<view class="padding-xs margin-xs box">
+  <van-row class="padding-xs margin-xs" wx:for="{{adds}}" wx:key>
+    <van-col span="20" class="title">
+      <view>姓名：{{item.name}}</view>
+      <view>电话：{{item.tel}}</view>
+      <view>地址：{{item.address_xq}}</view>
+    </van-col>
+    <van-col span="4" class="bg-white btn">
+      <button class="cu-btn reset" data-id="{{item.id}}" bindtap="reset">删除</button>
+      <button class="cu-btn" data-id="{{item.id}}" bindtap="tacit">默认</button>
+    </van-col>
+  </van-row>
+</view>
+<!-- 添加地址 -->
+<view class="flex flex-direction add">
+  <button class="cu-btn bg-blue lg" bindtap="add" data-id="{{item.id}}">添加地址</button>
+</view>

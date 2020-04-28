@@ -1,0 +1,67 @@
+<!--pages/tack/tack.wxml-->
+<view class="flex padding justify-center box">
+  <form>
+    <!-- 收货人姓名 -->
+    <view class="cu-form-group padding">
+      <view class="title">收货人姓名</view>
+      <input value="{{name}}" bindblur="name"></input>
+    </view>
+    <!-- 手机号码 -->
+    <view class="cu-form-group padding">
+      <view class="title">手机号码</view>
+      <input value="{{phone}}" maxlength="11" bindblur="phone"></input>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-blue">
+          +86
+        </view>
+        <view class="cu-tag line-blue">
+          中国大陆
+        </view>
+      </view>
+    </view>
+    <!-- 省份选择 -->
+    <view class="cu-form-group margin-top">
+      <view class="title">省份</view>
+      <picker bindchange="PickerChange" value="{{index}}" range="{{sheng_name}}">
+        <view class="picker">
+          {{index?sheng_name[index]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+    <!-- 城市选择 -->
+    <view class="cu-form-group margin-top">
+      <view class="title">城市</view>
+      <picker bindchange="PickerChangeTo" value="{{indexs}}" range="{{cheng_name}}">
+        <view class="picker">
+          {{indexs?cheng_name[indexs]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+    <!-- 区域选择 -->
+    <view class="cu-form-group margin-top">
+      <view class="title">区</view>
+      <picker bindchange="PickerChangeXo" value="{{indexv}}" range="{{xian_name}}">
+        <view class="picker">
+          {{indexv?xian_name[indexv]:'请选择'}}
+        </view>
+      </picker>
+    </view>
+    <!-- 详细地址 -->
+    <view class="cu-form-group solid-bottom padding">
+      <view class="title">详细地址</view>
+      <input value="{{detailed}}" bindblur="detailed"></input>
+    </view>
+    <!-- 备注信息 -->
+    <view class="cu-form-group solid-bottom padding">
+      <view class="title">备注信息</view>
+      <input value="{{remark}}" bindblur="remark"></input>
+    </view>
+  </form>
+</view>
+<!-- 按钮 -->
+<!-- <view class="flex flex-direction">
+  <button class="cu-btn bg-yellow lg btn" bindtap="preserve">保存地址</button>
+</view> -->
+<view class="flex flex-direction add">
+  <button class="cu-btn bg-yellow lg btn" bindtap="preserve">添加地址</button>
+</view>

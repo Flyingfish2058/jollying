@@ -1,0 +1,33 @@
+<!-- 标签页 -->
+<van-tabs active="{{ active }}" bind:change="onChange">
+<!-- 一级 -->
+  <van-tab title="一级">
+    <view class="flex bg-white solid-bottom padding-xs justify-center">
+      <view class="bg-white">一级用户数量：{{length}}</view>
+    </view>
+    <view class="bg-white flex solid-bottom padding justify-start" wx:for="{{yh}}" wx:key>
+      <view>
+        <image class="head" src="{{item.photo}}"></image>
+      </view>
+      <view class="bg-white margin-xs radius title">
+        <view class="username">用户名：{{item.name}}</view>
+        <view>手机号：{{item.tel}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <!-- 二级 -->
+  <van-tab title="二级">
+    <view class="flex bg-white solid-bottom padding-xs justify-center">
+      <view class="bg-white">二级用户数量：{{length}}</view>
+    </view>
+    <view class="bg-white flex solid-bottom padding justify-start" wx:for="{{yh}}" wx:key>
+      <view>
+        <image class="head" src="{{item.photo}}"></image>
+      </view>
+      <view class="bg-white margin-xs radius title">
+        <view class="username">用户名：{{item.name}}</view>
+        <view>手机号：{{item.tel}}</view>
+      </view>
+    </view>
+  </van-tab>
+</van-tabs>

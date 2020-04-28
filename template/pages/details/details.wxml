@@ -1,0 +1,65 @@
+<!--pages/details/details.wxml-->
+<!-- 轮播 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{fous}}" wx:key>
+    <image src="{{fous}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+<!-- 信息 -->
+<view>
+  <view class="flex justify-between one">
+    <view class="padding-sm radius name">{{pro.name}}</view>
+  </view>
+  <view class="flex justify-between">
+    <view class="padding-sm radius money">￥{{pro.price_yh}}</view>
+    <view class="padding-sm radius stock">库存：{{pro.num}}</view>
+  </view>
+</view>
+<!-- 标签页 -->
+<view>
+  <van-tabs active="a">
+    <van-tab title="图文详情" name="a" class="photo">
+        <rich-text nodes="{{pro.content}}"></rich-text>
+    </van-tab>
+    <van-tab title="产品参数" name="b">
+      <view class="flex solid-bottom padding justify-between">
+        <view class="padding-sm radius">商品名称：{{pro.name}}</view>
+      </view>
+      <view class="flex solid-bottom padding justify-between">
+        <view class="padding-sm radius">商品编号：{{pro.addtime}}</view>
+      </view>
+      <view class="flex solid-bottom padding justify-between">
+        <view class="padding-sm radius">分类：{{pro.cat_name}}</view>
+      </view>
+    </van-tab>
+  </van-tabs>
+</view>
+
+<!-- 立即购买按钮 -->
+<view class="flex flex-direction btn buy">
+  <button class="cu-btn bg-blue lg" bindtap="buy">立即购买</button>
+</view>
+<!-- 上拉菜单 -->
+<van-action-sheet bind:close="onClose" show="{{ show }}">
+  <view>
+    <view class="flex justify-start">
+      <view class="radius">
+        <image class="padding-sm img" src="{{pro.photo_x}}"></image>
+      </view>
+      <view class="padding-sm radius xinxi">
+        <view class="name">{{pro.name}}</view>
+        <view class="money">￥{{pro.price_yh}}</view>
+        <view class="stock">库存：{{pro.num}}</view>
+      </view>
+    </view>
+    <view class="flex solid-bottom padding justify-between">
+      <view class="radius numbers">购买数量</view>
+      <view class="radius">
+        <van-stepper value="{{shu}}" bind:change="onChange" />
+      </view>
+    </view>
+    <view class="padding flex flex-direction">
+      <button class="cu-btn bg-blue lg" bindtap="once" data-id="{{item.id}}">立即购买</button>
+    </view>
+  </view>
+</van-action-sheet>

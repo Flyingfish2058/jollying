@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<view class="flex justify-between">
+  <!-- <view class="radius">
+    <image class="padding-sm img" src="{{photo_x}}"></image>
+  </view>
+  <view class="padding-sm radius xinxi">
+    <view class="name">{{name}}</view>
+    <view class="money">￥{{price_yh}}</view>
+    <view class="stock">库存：{{num}}</view>
+  </view> -->
+  <van-card  style="width:100vw;" num="{{shu}}" price="库存：{{num}}" desc="￥{{price_yh}}" title="{{name}}" thumb="{{photo_x}}" />
+</view>
+<!-- 添加收货地址 -->
+<view class="flex padding justify-start">
+  <view class="radius">
+    <image class="icon" src="{{icons}}"></image>
+  </view>
+  <!-- 收货地址 -->
+  <view class="radius addres site" bindtap="addres">
+    <view class="flex justify-between">
+      <view>收货人：{{site.name}}</view>
+      <view>{{site.tel}}</view>
+    </view>
+    <view>{{site.address_xq}}</view>
+  </view>
+</view>
+<!-- 备注 -->
+<view class="padding remarks">
+  <van-row class="radius addres" gutter="20">
+    <van-col span="4">备注</van-col>
+    <van-col span="20">
+      <input maxlength="100"></input>
+    </van-col>
+  </van-row>
+</view>
+<view class="paly">
+  <view class="flex padding justify-center">
+    <view class="padding-sm margin-xs radius pay">
+      应共支付：
+      <span>￥{{nums}}</span>
+    </view>
+  </view>
+  <!-- 支付按钮 -->
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-gray lg" bindtap="payment">线下支付</button>
+  </view>
+</view>

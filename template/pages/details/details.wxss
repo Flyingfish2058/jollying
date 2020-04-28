@@ -1,0 +1,35 @@
+/* pages/details/details.wxss */
+.name{
+  font-weight: bold;
+}
+.one{
+  margin-bottom: -10px;
+}
+.money{
+  color: red;
+}
+.stock{
+  color: gainsboro;
+  position: relative
+}
+.liji{
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+.buy{
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+}
+.img{
+  width: 7rem;
+  height: 7rem;
+}
+.xinxi{
+  font-size: 35rpx;
+  margin-top: 60rpx;
+}
+.numbers{
+  font-size: 40rpx;
+}

@@ -1,0 +1,39 @@
+/* pages/invite/invite.wxss */
+
+.big {
+  flex-direction: column;
+  background-image: url("https://i2.tiimg.com/704744/dcf43dc2af3ab447.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+}
+
+.call {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: blue;
+  margin-top: 70rpx;
+  margin-bottom: -70rpx;
+}
+
+.box {
+  width: 70%;
+  background-color: white;
+  opacity: 0.7;
+  padding-bottom: 140rpx;
+  padding-top: 70rpx;
+  margin: auto;
+}
+
+.porn {
+  font-size: 40rpx;
+  padding-bottom: 30rpx;
+}
+
+.code {
+  width: 9rem;
+  height: 9rem;
+}
+
+.sao {
+  margin-top: 50rpx;
+}

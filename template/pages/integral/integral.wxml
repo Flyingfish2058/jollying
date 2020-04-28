@@ -1,0 +1,46 @@
+<!--pages/integral/integral.wxml-->
+<!-- 积分 -->
+<view class="bg-blue padding back light"></view>
+<view class="bg-white integral">
+  <view>
+    <text>我的积分</text>
+    <view wx:if="{{jifen > 0}}"><text>{{jifen}}</text></view>
+    <view wx:elif="{{jifen < 0}}"><text>0</text></view>
+    <view wx:else><text>0</text></view>
+  </view>
+  <view>
+    <text>待审核积分</text>
+    <text>{{daishen}}</text>
+  </view>
+</view>
+<!-- 表单 -->
+<form>
+  <view class="cu-form-group">
+    <view class="title">姓名</view>
+    <input placeholder="请输入收款人姓名" value="{{username}}" bindblur="name"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">收款人电话</view>
+    <input placeholder="请输入真实的收款人电话" maxlength="11" value="{{phone}}" bindblur="phone"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title" style="color:{{color3}}">提现账户</view>
+    <input placeholder="请输入银行卡号或支付宝账号" value="{{account}}" bindblur="account"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">提现金额</view>
+    <input placeholder="请输入提现金额" value="{{money}}" bindblur="money"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">实际到账</view>
+    <input value="{{moneys}}" disabled="true" bindblur="amount"></input>
+  </view>
+  <!-- 注释 -->
+  <view class="flex solid-bottom padding justify-end">
+    <text>注：提现每笔扣除10%手续费</text>
+  </view>
+  <!-- 提交按钮 -->
+  <view class="flex solid-bottom padding justify-center">
+    <view class="bg-gradual-blue solid butsq" bindtap="but">提交申请</view>
+  </view>
+</form>

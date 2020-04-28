@@ -1,0 +1,37 @@
+/* pages/integral/integral.wxss */
+.back {
+  height: 250rpx;
+}
+
+.integral {
+  background-color: rgb(0, 217, 255);
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 18% 0% 11% 0%;
+  margin: -150rpx 50rpx 0rpx 50rpx;
+}
+
+.integral view {
+  display: flex;
+  flex-direction: column;
+}
+
+.integral view>text {
+  padding-bottom: 30rpx;
+  color: black;
+  font-size: 35rpx;
+  /* color: white; */
+}
+
+.cu-form-group .title {
+  min-width: calc(4em + 60rpx);
+}
+
+.cu-form-group input {
+  font-size: 25rpx;
+}
+
+.butsq {
+  padding: 20rpx;
+}

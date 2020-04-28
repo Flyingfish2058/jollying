@@ -1,0 +1,17 @@
+<!--pages/mine/mine.wxml-->
+<view class="flex justify-around card">
+<!-- 个人信息 -->
+	<view>
+		<view>
+      <view>石磊</view>
+      <view>15136769311</view>
+    </view>
+    <view>网站、软件、App、小程序推广</view>
+	</view>
+<!-- 工作地址 -->
+	<view>
+    <view>大邦软件</view>
+    <view>15136769311</view>
+    <view>河南省新乡市卫滨区自由街汇景花园</view>
+	</view>
+</view>

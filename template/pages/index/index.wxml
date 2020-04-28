@@ -1,0 +1,27 @@
+<!-- 轮播 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+	<swiper-item wx:for="{{ggtop}}" wx:key>
+		<image src="{{item.photo}}" mode="aspectFill"></image>
+		<video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"></video>
+	</swiper-item>
+</swiper>
+<!-- 布局 -->
+<view class="flex solid-bottom padding justify-center list">
+	<view class="bg-white padding-xs margin-xs radius left" wx:for="{{prolist}}" wx:key>
+		<view bindtap="detail" data-id="{{item.id}}">
+			<image style="width:100%;height:300rpx;" src="{{item.photo_x}}"></image>
+			<view class="van-ellipsis margin-xs radius">{{item.name}}</view>
+			<view class="flex justify-between amount">
+				<view class="margin-xs radius money">￥{{item.price_yh}}</view>
+				<view class="margin-xs radius dele">{{item.price}}</view>
+				<!-- <view class="margin-xs radius">{{item.recom}}</view> -->
+				<view class="margin-xs radius">销量：{{item.shiyong}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 按钮 -->
+<view class="padding flex flex-direction">
+	<button class="cu-btn bg-white margin-tb-sm lg btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">点击查看更多</button>
+	<!-- <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button> -->
+</view>

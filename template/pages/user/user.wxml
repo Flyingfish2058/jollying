@@ -1,0 +1,39 @@
+<view class="container">
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<text class="userinfo-nickname">{{userInfo.nickName}}</text>
+		</block>
+	</view>
+</view>
+<view class="usermotto">
+	<van-row gutter="20" class="logo padding radius">
+		<van-col span="8">
+			<image class="icon" src="{{phone}}"></image>
+			<view>绑定手机</view>
+		</van-col>
+		<van-col span="8" bindtap="integral">
+			<image class="icon" src="{{integral}}"></image>
+			<view>积分兑换</view>
+		</van-col>
+		<van-col span="8">
+			<image class="icon" src="{{order}}"></image>
+			<view>我的订单</view>
+		</van-col>
+	</van-row>
+	<van-row gutter="20" class="logo padding radius">
+		<van-col span="8" bindtap="empower">
+			<image class="icon" src="{{empower}}"></image>
+			<view>授权</view>
+		</van-col>
+		<van-col span="8" class='footer_list2' data-id='4' catchtap='freeTell' data-current="4" bindtap="chooseImg">
+			<image class="icon" src="{{mine}}"></image>
+			<view>咨询电话</view>
+		</van-col>
+		<van-col span="8" bindtap="navgat">
+			<image class="icon" src="{{map}}"></image>
+			<view>导航</view>
+		</van-col>
+	</van-row>
+</view>
